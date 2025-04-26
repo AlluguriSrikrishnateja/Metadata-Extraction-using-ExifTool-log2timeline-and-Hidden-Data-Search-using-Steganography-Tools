@@ -35,6 +35,7 @@ exiftool image.jpg
 exiftool -r /path/to/folder
 ```
 
+
 * Useful flags:
 
 -G: Show metadata group
@@ -44,5 +45,44 @@ exiftool -r /path/to/folder
 -GPSLatitude -GPSLongitude: Extract GPS data
 
 
+<img width="461" alt="image" src="https://github.com/user-attachments/assets/1853aa3d-b7f2-4f52-b05b-b79e72af004d" />
 
+
+# install log2timeline
+
+```
+sudo apt install plaso -y
+```
+
+```
+sudo apt install steghide -y
+```
+
+* Embed data
+```
+steghide embed -cf /home/kali/Downloads/wallpaper.jpg -ef /home/kali/Downloads/sec
+
+```
+
+<img width="475" alt="image" src="https://github.com/user-attachments/assets/a9d66203-47e2-4028-a602-6bb903ebba6d" />
+
+* Extract hidden data:
+```
+steghide extract -sf hidden.jpg
+
+```
+<img width="476" alt="image" src="https://github.com/user-attachments/assets/08c23224-7459-4127-8cfa-8c26a70b3a01" />
+
+* Using binwalk – for file analysis
+```
+sudo apt install binwalk -y
+```
+
+```
+binwalk /home/kali/Downloads/wallpaper.jpg
+```
+<img width="475" alt="image" src="https://github.com/user-attachments/assets/a78009c8-4092-4de2-bdf9-2aab52a75318" />
+
+# RESULT:
+Metadata was successfully extracted, timeline analysis was completed, and hidden data was identified using steganography tools.
 
